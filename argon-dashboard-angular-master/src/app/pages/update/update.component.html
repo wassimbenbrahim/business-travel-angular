@@ -1,0 +1,88 @@
+<div class="body">
+  <form class="form-horizontal">
+    <div class="row clearfix">
+      <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
+        <label for="first_name">descInvit</label>
+      </div>
+      <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+        <div class="form-group">
+          <div class="form-line">
+            <input descInvit="first_name" [(ngModel)]="Currentinvit.descInvit" type="text" id="first_name" class="form-control" placeholder="Enter your first name">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row clearfix">
+      <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
+        <label for="last_name">titreInvit</label>
+      </div>
+      <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+        <div class="form-group">
+          <div class="form-line">
+            <input name="titreInvit" [(ngModel)]="Currentinvit.titreInvit" type="text" id="last_name" class="form-control" placeholder="Enter your last name">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row clearfix">
+      <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
+        <label for="email_address_2">status</label>
+      </div>
+      <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+        <div class="form-group">
+          <div class="form-line">
+            <input name="status" [(ngModel)]="Currentinvit.status" type="text" id="email_address_2" class="form-control" placeholder="Enter your email address">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row clearfix">
+      <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
+        <label for="password_3">emailSent</label>
+      </div>
+      <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+        <div class="form-group">
+          <div class="form-line">
+            <input name="emailSent" [(ngModel)]="Currentinvit.emailSent" type="text" id="password_3" class="form-control" placeholder="">
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="row clearfix">
+      <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
+        <label for="password_2">emailEmpl</label>
+      </div>
+      <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+        <div class="form-group">
+          <div class="form-line">
+            <input name="emailEmpl" [(ngModel)]="Currentinvit.emailEmpl" type="text" id="password_2" class="form-control" placeholder="Enter your password">
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="row clearfix">
+      <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
+        <label for="password_2">id</label>
+      </div>
+      <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+        <div class="form-group">
+          <div class="form-line">
+            <input name="emailEmpl" [(ngModel)]="Currentinvit.idInvit" type="text" id="id2" class="form-control" placeholder="Enter your password">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row clearfix">
+      <div class="col-lg-offset-2 col-md-offset-2 col-sm-offset-4 col-xs-offset-5">
+        <button type="submit" (click)="updateClaim()" class="btn btn-success">Modifier</button>      </div>
+    </div>
+
+  </form>
+</div>
+
