@@ -1,0 +1,44 @@
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-6" style="text-align:center;">
+      <h3>liste invitation</h3>
+      <app-search></app-search>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-8">
+      <br /><br />
+      <div class="table-responsive">
+        <table id="mytable" class="table table-bordred table-striped">
+          <thead>
+          <th>idInvit</th>
+
+          <th>titreInvit</th>
+          <th>descInvit</th>
+          <th>emailEmpl</th>
+
+          </thead>
+
+          <tbody>
+          <div *ngIf="user">
+            <tr *ngFor="let u of user">
+
+              <td>{{u.email}}</td>
+
+              <td>{{u.username}}</td>
+
+
+              <button  type="button" class="btn btn-primary">accept</button>
+
+            </tr>
+          </div>
+
+          </tbody>
+        </table>
+
+      </div>
+    </div>
+  </div>
+</div>

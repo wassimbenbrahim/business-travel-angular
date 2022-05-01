@@ -1,0 +1,41 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6" style="text-align:center;">
+      <h3>liste invitation</h3>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-8">
+      <br /><br />
+      <div class="table-responsive">
+        <table id="mytable" class="table table-bordred table-striped">
+          <thead>
+          <th>idInvit</th>
+
+          <th>titreInvit</th>
+          <th>descInvit</th>
+          <th>emailEmpl</th>
+
+          </thead>
+
+          <tbody>
+          <tr *ngFor="let u of listinvit">
+
+            <td>{{u.idInvit}}</td>
+
+            <td>{{u.titreInvit}}</td>
+
+            <td>{{u.descInvit}}</td>
+            <td>{{u.emailEmpl}}</td>
+            <button  type="button" class="btn btn-primary">accept</button>
+
+          </tr>
+
+
+          </tbody>
+        </table>
+
+      </div>
+    </div>
+  </div>
+</div>
