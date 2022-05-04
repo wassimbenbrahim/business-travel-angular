@@ -3,6 +3,11 @@
     <div class="col-md-6" style="text-align:center;">
       <h3>liste invitation</h3>
     </div>
+    <img
+
+      src="https://knowledgeworks.org/wp-content/uploads/2016/08/invitation-300x216.jpg"
+      class="profile-img-card" height="200px" width="1200px"
+    />
   </div>
   <div class="row">
     <div class="col-md-8">
@@ -27,7 +32,7 @@
 
             <td>{{u.descInvit}}</td>
             <td>{{u.emailEmpl}}</td>
-            <button  type="button" class="btn btn-primary">accept</button>
+            <button onclick="this.disabled=true"  type="button" class="btn btn-primary" (click)="getname()"class="alert alert-success" role="alert">accept</button>
 
           </tr>
 

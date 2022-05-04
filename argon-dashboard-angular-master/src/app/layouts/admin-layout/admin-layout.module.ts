@@ -16,19 +16,24 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import {InvitationComponent} from '../../pages/invitation/invitation.component';
 import {AddinvitationComponent} from '../../pages/addinvitation/addinvitation.component';
 import {UpdateComponent} from '../../pages/update/update.component';
+import {StatistiqueComponent} from '../../pages/statistique/statistique.component';
+import {Ng2SearchPipeModule} from 'ng2-search-filter';
 
 
 // import { ToastrModule } from 'ngx-toastr';
 
+
+
 @NgModule({
-  imports: [
-    CommonModule,
-    RouterModule.forChild(AdminLayoutRoutes),
-    FormsModule,
-    HttpClientModule,
-    NgbModule,
-    ClipboardModule
-  ],
+    imports: [
+        CommonModule,
+        RouterModule.forChild(AdminLayoutRoutes),
+        FormsModule,
+        HttpClientModule,
+        NgbModule,
+        ClipboardModule,
+        Ng2SearchPipeModule
+    ],
   declarations: [
     DashboardComponent,
     UserProfileComponent,
@@ -37,7 +42,8 @@ import {UpdateComponent} from '../../pages/update/update.component';
     MapsComponent,
     InvitationComponent,
     AddinvitationComponent,
-    UpdateComponent
+    UpdateComponent,
+    StatistiqueComponent
   ]
 })
 

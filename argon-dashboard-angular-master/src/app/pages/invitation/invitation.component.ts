@@ -15,6 +15,7 @@ export class InvitationComponent implements OnInit {
 
   listinvit: Invitation[];
   listinvitt: Object;
+  term: any;
 
 
   ngOnInit(): void {
@@ -28,6 +29,11 @@ export class InvitationComponent implements OnInit {
   delete(idInvit: number) {
     this._service.deleteUserById(idInvit).subscribe(data => { console.log(data); });
   }
+
+  sendinvit() {
+    this._service.sendinvit().subscribe(data => { console.log(data); });
+  }
+
 
 
 

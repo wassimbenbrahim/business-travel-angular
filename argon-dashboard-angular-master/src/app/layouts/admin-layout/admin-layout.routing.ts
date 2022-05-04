@@ -8,6 +8,7 @@ import { TablesComponent } from '../../pages/tables/tables.component';
 import {InvitationComponent} from '../../pages/invitation/invitation.component';
 import {AddinvitationComponent} from '../../pages/addinvitation/addinvitation.component';
 import {UpdateComponent} from '../../pages/update/update.component';
+import {StatistiqueComponent} from '../../pages/statistique/statistique.component';
 
 export const AdminLayoutRoutes: Routes = [
     { path: 'dashboard',      component: DashboardComponent },
@@ -17,6 +18,8 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'maps',           component: MapsComponent },
   { path: 'invitation',           component:     InvitationComponent},
   { path: 'addinvitation',           component:     AddinvitationComponent},
-  { path: 'update',           component:     UpdateComponent}
+  { path: 'update',           component:     UpdateComponent},
+  { path: 'statistique',           component:         StatistiqueComponent},
+
 
 ];

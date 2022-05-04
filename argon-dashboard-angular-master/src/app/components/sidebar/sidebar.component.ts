@@ -18,7 +18,9 @@ export const ROUTES: RouteInfo[] = [
   { path: '/invitation', title: 'invitation',  icon:'ni-circle-08 text-pink', class: '' },
   { path: '/addinvitation', title: 'addinvitation',  icon:'ni-tv-2 text-primary', class: '' },
 
-  { path: '/update', title: 'update',  icon:'ni-tv-2 text-primary', class: '' }
+  { path: '/update', title: 'update',  icon:'ni-tv-2 text-primary', class: '' },
+  { path: '/statistique', title: 'statistique',  icon:'ni-tv-2 text-primary', class: '' }
+
 
 ];
 

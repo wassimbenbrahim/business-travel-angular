@@ -13,16 +13,12 @@
       <div class="table-responsive">
         <table id="mytable" class="table table-bordred table-striped">
           <thead>
-          <th>idInvit</th>
-
-          <th>titreInvit</th>
-          <th>descInvit</th>
-          <th>emailEmpl</th>
-
+          <th>email</th>
+          <th>username</th>
           </thead>
 
           <tbody>
-          <div *ngIf="user">
+
             <tr *ngFor="let u of user">
 
               <td>{{u.email}}</td>
@@ -30,10 +26,9 @@
               <td>{{u.username}}</td>
 
 
-              <button  type="button" class="btn btn-primary">accept</button>
 
             </tr>
-          </div>
+
 
           </tbody>
         </table>

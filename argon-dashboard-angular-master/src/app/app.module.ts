@@ -9,11 +9,11 @@ import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.compon
 import { AuthLayoutComponent } from './layouts/auth-layout/auth-layout.component';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 import { AppRoutingModule } from './app.routing';
 import { ComponentsModule } from './components/components.module';
-import { UpdateComponent } from './pages/update/update.component';
-import { StatistiqueComponent } from './pages/statistique/statistique.component';
+
 
 
 
@@ -25,13 +25,14 @@ import { StatistiqueComponent } from './pages/statistique/statistique.component'
     ComponentsModule,
     NgbModule,
     RouterModule,
+    Ng2SearchPipeModule,
     AppRoutingModule
   ],
   declarations: [
     AppComponent,
     AdminLayoutComponent,
-    AuthLayoutComponent,
-    StatistiqueComponent
+    AuthLayoutComponent
+
   ],
   providers: [],
   bootstrap: [AppComponent]

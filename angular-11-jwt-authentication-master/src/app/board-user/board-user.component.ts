@@ -12,7 +12,7 @@ export class BoardUserComponent implements OnInit {
   content?: string;
   listinvit?: Invitation[];
   currentUser: any;
-
+  isDisabled = false;
   constructor(private userService: UserService , private token: TokenStorageService)  { }
 
 
@@ -35,5 +35,10 @@ export class BoardUserComponent implements OnInit {
         this.content = JSON.parse(err.error).message;
       }
     );
+  }
+  // @ts-ignore
+  // tslint:disable-next-line:typedef
+  getname(){
+    alert('thanx for accept');
   }
 }

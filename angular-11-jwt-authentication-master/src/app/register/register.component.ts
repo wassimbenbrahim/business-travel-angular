@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../_services/auth.service';
+import {jsPDF} from 'jspdf';
 
 @Component({
   selector: 'app-register',
