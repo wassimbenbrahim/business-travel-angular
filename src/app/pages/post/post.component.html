@@ -1,0 +1,32 @@
+<div style="margin-top: 150px;margin-bottom: 150px;">
+    <div  class="panel-heading">
+      <h2>Cagnotte  List</h2>
+      <button class="btn btn-success" routerLink="add" style="margin-left: 10px"  routerLinkActive="active">Add Posts</button>
+  
+      
+    </div>
+    <div class="panel-body">
+      <table   class="table table-striped">
+        <thead>
+          <tr>
+            <th>body</th>
+            <th>title</th>
+            <th>date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let post of listPosts" >
+            <td>{{post.body}}</td>
+            <td>{{post.title}}</td>
+            <td>{{post.datePost}}</td>
+  
+            <td><button (click)="deletePost(post.idPost)" class="btn btn-danger">Delete</button>
+                <button class="btn btn-info" style="margin-left: 10px">Update</button>
+  
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  

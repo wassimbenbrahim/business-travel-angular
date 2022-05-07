@@ -1,0 +1,83 @@
+<div class="header bg-gradient-danger pb-2 pt-2 pt-md-8">
+  <div class="container-fluid">
+    <div class="header-body">
+      <!-- Card stats -->
+    </div>
+  </div>
+</div>
+<!-- Page content -->
+<div class="container-fluid mt--7 pt-md-8">
+  <!-- Table -->
+
+  <!-- Dark table -->
+  <div class="row mt-5">
+    <div class="col">
+      <div class="card bg-default shadow">
+        <div class="card-header border-0">
+          <h2 class="mb-0" style="color: rgb(178, 11, 11); padding-left: 40%">
+            Liste des Profils
+          </h2>
+        </div>
+          <br />
+          <br />
+        <div class="table-responsive">
+          <table class="table align-items-center table-dark table-flush">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">Profile</th>
+                <th scope="col">CIN</th>
+                <th scope="col">Age</th>
+                <th scope="col">Number_Followers</th>
+                <th scope="col">Poupilarite</th>
+                <th scope="col">Nom Domaine</th>
+                <th scope="col"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let v of profil ">
+                <th scope="row">
+                  <div class="media align-items-center">
+                    <a href="javascript:void(0)" class="avatar rounded-circle mr-3">
+                      <img alt="Image placeholder" src="../assets/img/theme/+",{{v.name}}>
+                    </a>
+                    <div class="media-body">
+                      <span class="mb-0 text-sm">{{v.nom}}&{{v.prenom}}</span>
+                    </div>
+                  </div>
+                </th>
+                <td>
+                  {{v.cin}}
+                </td>
+                <td>
+                  {{v.age}}
+                </td>
+                <td>
+                  {{v.followers_nbr}}
+                </td>
+                <td>
+                  {{v.poupilarite}}
+                </td>
+                <td>
+                  {{v.nom_dom}}
+                </td>
+                <td class="text-right">
+                  <div ngbDropdown placement="bottom-right">
+                    <a class="btn btn-sm btn-icon-only text-light"  ngbDropdownToggle>
+                      <i class="fas fa-ellipsis-v"></i>
+                    </a>
+                    <div ngbDropdownMenu class=" dropdown-menu-right dropdown-menu-arrow">
+                      <a class="dropdown-item" on (click)="delete(v.id)">Delete</a>
+                      <a class="dropdown-item" href="javascript:void(0)">Another action</a>
+
+                    </div>
+                  </div>
+                </td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,91 @@
+<div class="header bg-gradient-danger pb-2 pt-2 pt-md-8">
+  <div class="container-fluid">
+    <div class="header-body">
+      <!-- Card stats -->
+    </div>
+  </div>
+</div>
+<!-- Page content -->
+<div class="container-fluid mt--7 pt-md-8">
+  <!-- Table -->
+
+  <div class="row">
+    <div class="col-md-9">
+
+    </div>
+    <div class="col-md-3">
+
+      <div class="media-body ml-2 d-none d-lg-block">
+        <button class="btn btn-icon btn-1  " type="submit"  (click)="GoToList()">
+          <span class="btn-inner--icon" ><i class="ni ni-fat-add " style="color: black;"></i></span>
+        </button>
+        <span class="mb-0 text-sm  font-weight-bold" style="color: black;">ADD NEW Voyage</span>
+      </div>
+    </div>
+
+</div>
+
+  <!-- Dark table -->
+  <div class="row mt-5">
+    <div class="col">
+      <div class="card bg-default shadow">
+        <div class="card-header border-0">
+          <h2 class="mb-0" style="color: rgb(178, 11, 11); padding-left: 40%">
+            Liste des Voyages
+          </h2>
+        </div>
+          <br />
+          <br />
+        <div class="table-responsive">
+          <table class="table align-items-center table-dark table-flush">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">Description</th>
+                <th scope="col">object</th>
+                <th scope="col">date o</th>
+                <th scope="col">date of Arrival</th>
+                <th scope="col">Price</th>
+
+                <th scope="col"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let v of voyage ">
+                
+                <td>
+                  {{v.destination}}
+                </td>
+                <td>
+                  {{v.object}}
+                </td>
+                <td>
+                  {{v.dateDeparture}}
+                </td>
+                <td>
+                  {{v.arrivalDate}}
+                </td>
+                <td>
+                  {{v.price}}
+                </td>
+                
+                <td class="text-right">
+                  <div ngbDropdown placement="bottom-right">
+                    <a class="btn btn-sm btn-icon-only text-light"  ngbDropdownToggle>
+                      <i class="fas fa-ellipsis-v"></i>
+                    </a>
+                    <div ngbDropdownMenu class=" dropdown-menu-right dropdown-menu-arrow">
+                      <a class="dropdown-item" on (click)="delete(v.idVoyage)">Delete</a>
+                      <a class="dropdown-item" routerLink="/voyag/{{v.idVoyage}}" >Edit</a>
+
+                    </div>
+                  </div>
+                </td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

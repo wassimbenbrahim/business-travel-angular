@@ -1,0 +1,165 @@
+<div class="header bg-gradient-danger pb-2 pt-2 pt-md-8">
+  <div class="container-fluid">
+    <div class="header-body">
+      <!-- Card stats -->
+    </div>
+  </div>
+</div>
+<!-- Page content -->
+<div class="container-fluid mt--7 pt-md-8">
+  <!-- Table -->
+
+
+
+    <div class="row">
+      <div class="col-md-9">
+
+      </div>
+      <div class="col-md-3">
+
+        <div class="media-body ml-2 d-none d-lg-block">
+          <button class="btn btn-icon btn-1  " type="submit"  (click)="GoToList()">
+            <span class="btn-inner--icon" ><i class="ni ni-bullet-list-67 " style="color: black;"></i></span>
+          </button>
+          <span class="mb-0 text-sm  font-weight-bold" style="color: black;">List Voyage</span>
+        </div>
+      </div>
+
+  </div>
+
+
+  <div class="row">
+    <div class="col">
+      <div class="card shadow">
+        <div class="card-header border-0">
+          <h2 class="mb-0" style="color: white; padding-left: 40%">
+            Manage New Travel
+          </h2>
+        </div>
+        <br/>
+        <br/>
+        <form [formGroup]="voyagForm" (ngSubmit)="onSubmit()" novalidate>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="form-group" style="padding-left: 10%">
+                <label>
+                  <h4>Destination</h4>
+                </label>
+                <input type="txt" class="form-control form-control-alternative" formControlName="destination"
+                  id="destination" placeholder="Ex:New York" />
+                <div *ngIf="
+                    getControl.destination.touched &&
+                    getControl.destination.invalid
+                  " class="text-danger">
+                  <div *ngIf="getControl.destination.errors.required">
+                    description is required.
+                  </div>
+                  <div *ngIf="getControl.destination.errors.email">
+                    description seems invalid.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="form-group" style="padding-left: 10%">
+                <label>
+                  <h4>Object</h4>
+                </label>
+                <select placeholder="Regular" class="form-control form-control-alternative" formControlName="object"
+                  name="object">
+                  
+                  <option value="">choose </option>
+                  <option value="1">SEMINAR</option>
+                  <option value="2">COMPANYVISITE</option>
+                  <option value="3">FAIR</option>
+                  <option value="4">Run</option>
+                  <option value="5">Business</option>
+                  <option value="6">Tourism</option>
+                  <option value="7">Hike</option>
+                 
+                </select>
+                <div *ngIf="getControl.object.touched && getControl.object.invalid" class="text-danger">
+                  <div *ngIf="getControl.object.errors.required">
+                    object is required.
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="form-group" style="padding-left: 10%">
+                <label>
+                  <h4>Date of departure</h4>
+                </label>
+                <input type="date" class="form-control form-control-alternative" formControlName="dateDeparture"
+                id="dateDeparture" placeholder="Type your destination"   />
+                <!-- <div class="input-group input-group-alternative">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="ni ni-calendar-grid-58"></i></span>
+                  </div>
+
+                  <input class="form-control datepicker" placeholder="Select date" id="dateDeparture" formControlName="dateDeparture"
+                    name="dateDeparture" ngbDatepicker #d="ngbDatepicker" (click)="d.toggle()" type="text" />
+                </div> -->
+              </div>
+            </div>
+            <div class="col-md-2"></div>
+            <div class="col-md-4">
+              <div class="form-group">
+                <label>
+                  <h4>Date of arrival</h4>
+                </label>
+                <input type="date" class="form-control form-control-alternative" formControlName="arrivalDate"
+                id="arrivalDate" placeholder="Type your destination"   />
+                <!-- <div class="input-group input-group-alternative">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="ni ni-calendar-grid-58"></i></span>
+                  </div>
+
+                  <input class="form-control datepicker" placeholder="Select date" name="arrivalDate" id="arrivalDate"
+                    formControlName="arrivalDate" ngbDatepicker #a="ngbDatepicker" (click)="a.toggle()" type="text" />
+                </div> -->
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-4">
+              <div class="form-group" style="padding-left: 10%">
+                <label>
+                  <h4>Price</h4>
+                </label>
+                <input type="email" class="form-control form-control-alternative" name="price" formControlName="price"
+                  id="price" placeholder="" />
+                <div *ngIf="getControl.price.touched && getControl.price.invalid" class="text-danger">
+                  <div *ngIf="getControl.price.errors.required">
+                    object is required.
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <br />
+            <br />
+          </div>
+          <div class="row">
+            <div class="float-right">
+              <button type="submit" class="btn btn-outline-success">
+                Save
+              </button>
+            </div>
+          </div>
+          <br />
+          <br />
+        </form>
+      </div>
+    </div>
+  </div>
+  <!-- Dark table -->
+  <br />
+  <br />
+</div>
